@@ -535,9 +535,15 @@ img {
   .features-holder img{
     width: 500px;
   }
+  .p-features {
+    padding-left: 60px;
+  }
   .size{
     font-size: 38px;
     line-height: 48px;
+  }
+  .feature-span {
+    font-size: 38px;
   }
 }
 
@@ -675,7 +681,7 @@ img {
   }
 
   .p-features {
-    padding-left: 40px;
+    padding-left: 0px;
   }
 
   .features-holder {
