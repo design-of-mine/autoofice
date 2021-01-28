@@ -1,5 +1,8 @@
 window.onload = function(){
 
+  // let preloader = document.getElementById('pl')
+  //     preloader.classList.add('load-finish')
+
 $( document ).ready(function() {
   $('.cta-button').on('click', function(){
     $('.popup-001').addClass('blur')
