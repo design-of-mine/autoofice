@@ -524,6 +524,26 @@ img {
   transform: translate(-50%, -50%);
 }
 
+.v-holder{
+  width: 80%;
+  margin: 80px auto 0;
+}
+
+.v-wrap{
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+}
+
+.v-wrap iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
 @media screen and (max-width: 1200px){
   .header{
     height: 68px;
@@ -828,6 +848,10 @@ img {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
+  }
+
+  .v-holder{
+    width: 100%;
   }
 }
 
