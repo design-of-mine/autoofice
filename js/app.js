@@ -1,21 +1,32 @@
-window.onload = function(){
+"use strict";
+
+window.addEventListener('load', () =>{
 
   // let preloader = document.getElementById('pl')
   //     preloader.classList.add('load-finish')
 
-$( document ).ready(function() {
-  $('.cta-button').on('click', function(){
-    $('.popup-001').addClass('blur')
-    $('body').toggleClass('o-hidden')
-  })
-      $('.closer').on('click', function(){
-        $(this).parent('div').removeClass('tr-none blur')
-        $('body').removeClass('o-hidden')
-    })
-})
+// form
+  let cta = document.querySelectorAll('.cta-button'),
+      closer = document.querySelectorAll('.closer'),
+      popup = document.querySelector('.popup-001'),
+      body = document.querySelector('body')
+
+      for (let i = 0; i < cta.length; i++){   
+          cta[i].addEventListener('click', () =>{
+                popup.classList.add('blur', 'transition');
+                body.classList.toggle('o-hidden');
+          });
+      };
+
+      for (let i = 0; i < cta.length; i++){   
+        closer[i].addEventListener('click', () =>{
+            popup.classList.remove('blur');
+            body.classList.remove('o-hidden');
+          });
+      };
+
 
 var mySwiper = new Swiper ('.swiper-container', {
-
     //new added
           slidesPerView: 1,
           spaceBetween: 30,
@@ -23,34 +34,25 @@ var mySwiper = new Swiper ('.swiper-container', {
           pagination: {
             el: '.swiper-pagination',
             clickable: true,
+            dynamicBullets: true,
           },
-    //end new added
-    
-        // Optional parameters
     //    direction: 'vertical',
         loop: true,
           speed: 600,
           grabCursor: false,
-    
-        // If we need pagination
-        pagination: {
-          el: '.swiper-pagination',
-            dynamicBullets: true,
-        },
+
     //      autoplay: {
     //        delay: 2500,
     //        disableOnInteraction: false,
     //      },
-    
         // Navigation arrows
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
-    
         // And if we need scrollbar
         scrollbar: {
           el: '.swiper-scrollbar',
         },
       })
-    }
+    })
